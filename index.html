@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote of the Day</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <i class="fas fa-quote-right"></i>
+        <span>QuoteDaily</span>
+      </div>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="main-header">
+      <h1 class="animated-title">Quote of the Day</h1>
+      <p class="date" id="currentDate"></p>
+    </header>
+    
+    <main>
+      <div class="quote-box">
+        <div class="quote-content">
+          <p class="quote-text" id="quoteText">Click "New Quote" to get your daily inspiration!</p>
+          <p class="quote-author" id="quoteAuthor"></p>
+        </div>
+        
+        <div class="action-buttons">
+          <button class="action-btn new-quote-btn" id="newQuoteBtn">
+            <i class="fas fa-refresh"></i>
+            New Quote
+          </button>
+          <button class="action-btn save-btn" id="saveBtn">
+            <i class="fas fa-heart"></i>
+            Save
+          </button>
+          <button class="action-btn share-btn" id="shareBtn">
+            <i class="fas fa-share"></i>
+            Share
+          </button>
+          
+          <button class="action-btn ai-btn" id="aiBtn">
+            <i class="fas fa-robot"></i>
+            AI Chat
+          </button>
+        </div>
+      </div>
+
+      <!-- AI Chat Modal -->
+      <div class="ai-modal" id="aiModal">
+        <div class="ai-modal-content">
+          <div class="ai-modal-header">
+            <h3><i class="fas fa-robot"></i> AI Assistant</h3>
+            <button class="close-btn" id="closeAiModal">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="ai-chat-container" id="aiChatContainer">
+            <div class="ai-message ai-message-bot">
+              <i class="fas fa-robot"></i>
+              <span>Hello! I'm your AI assistant. Ask me anything about quotes, motivation, or life advice!</span>
+            </div>
+          </div>
+          <div class="ai-input-container">
+            <input type="text" id="aiInput" placeholder="Ask me anything..." maxlength="200">
+            <button id="sendAiMessage" disabled>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="saved-quotes" id="savedQuotes">
+        <h3>Saved Quotes</h3>
+        <div class="saved-list" id="savedList"></div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>QuoteDaily</h4>
+        <p>Daily inspiration at your fingertips</p>
+      </div>
+      <div class="footer-section">
+        <h4>Features</h4>
+        <ul>
+          <li>Daily quotes</li>
+          <li>Save favorites</li>
+          <li>Share with friends</li>
+          <li>Dark mode</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 QuoteDaily. Powered by Quotable API</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
